@@ -1,5 +1,7 @@
 # GSTOCK-TEST
 
+This repository contains an API with the specs asked for a vacancy in gstock. 
+
 ## Installation.
 
 In order to install the API, you should follow the next steps:
@@ -18,7 +20,7 @@ cd gstock-test
 
 3. Run the container.
 
-This command will create two containers: api and database containers. 
+This command will create three containers: api, MySQL database and phpMyAdmin containers. 
 
 ```sh
 docker-compose up
