@@ -6,4 +6,24 @@ services:
     volumes:
       - ./:/var/www/html/
     ports:
-      - 8000:80
+      - 80:80
+    links:
+      - db
+
+  db:
+    image: mysql
+    ports:
+      - 3606:3606
+    environment:
+      MYSQL_DATABASE: gstock_api
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: gstock_api
+      MYSQL_ROOT_PASSWORD: gstock_api
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    links:
+      - db
