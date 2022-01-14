@@ -41,6 +41,12 @@ class OrderItem
      */
     private $price;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Order::class, inversedBy="orderItems")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $parentOrder;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -78,6 +84,18 @@ class OrderItem
     public function setPrice(string $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getParentOrder(): ?Order
+    {
+        return $this->parentOrder;
+    }
+
+    public function setParentOrder(?Order $parentOrder): self
+    {
+        $this->parentOrder = $parentOrder;
 
         return $this;
     }
