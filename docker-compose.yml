@@ -3,15 +3,18 @@ version: '3'
 services:
   api:
     build: ./docker/apache
+    container_name: gstock_api
     volumes:
       - ./:/var/www/html/
     ports:
       - 80:80
+      - 8000:8000
     links:
       - db
 
   db:
     image: mysql
+    container_name: gstock_db
     ports:
       - 3606:3606
     environment:
@@ -22,7 +25,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin
-    restart: always
+    container_name: gstock_phpmyadmin 
     ports:
       - 8080:80
     links:
