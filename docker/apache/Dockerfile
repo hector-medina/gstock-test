@@ -6,5 +6,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
        zip intl mysqli pdo pdo_mysql
 RUN curl -sS https://getcomposer.org/installer | php && mv /var/www/html/composer.phar /usr/local/bin/composer
 COPY . /var/www/html/
+COPY 000-default.conf /etc/apache2/sites-available
 RUN adduser user
 USER user
