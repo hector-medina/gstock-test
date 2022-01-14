@@ -43,3 +43,6 @@ And then you can install dependencies with composer:
 ```sh
 composer install
 ```
+5. Visit your site.
+
+Now you are able to access your site by typing http://localhost:8000
