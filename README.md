@@ -2,23 +2,28 @@
 
 This repository contains an API with the specs asked for a vacancy in gstock. 
 
+The infrastucture has been developed as follows:
+- gstock_api: API container.
+- gstock_db: MySQL database.
+- gstock_phpmyadmin: phpMyAdmin client for MySQL database.
+
 ## Installation.
 
 In order to install the API, you should follow the next steps:
 
-1. Clone this repository.
+### 1. Clone this repository.
 
 ```sh
 git clone https://github.com/hector-medina/gstock-test.git
 ```
 
-2. Get into the project's folder.
+### 2. Get into the project's folder.
 
 ```sh
 cd gstock-test
 ```
 
-3. Run the container.
+### 3. Run the container.
 
 This command will create three containers: api, MySQL database and phpMyAdmin containers. 
 
@@ -26,25 +31,21 @@ This command will create three containers: api, MySQL database and phpMyAdmin co
 docker-compose up
 ```
 
-4. Install dependencies.
+### 4. Install dependencies.
 
-- If you have installed [Composer](https://getcomposer.org/) installed, just run: 
+You should run a command inside the container. To do so, first you have connect to it:
 ```sh
-composer install
+docker exec -it gstock_api bash
 ```
-- If you NOT have composer installed in your host machine, then you should run the 
-command inside the container. To do so, first you have to get your container ID:
-```sh
-docker ps -q
-```
-Then you should connect to your container :
-```sh
-docker exec -it <CONTAINER_ID> bash
-```
+
 And then you can install dependencies with composer:
 ```sh
 composer install
 ```
-5. Visit your site.
 
-Now you are able to access your site by typing http://localhost:8000
+### 5. Visit your site.
+
+Now you are able to access your site by typing, but there are currently two enviroment exposed
+- http://localhost:80 or http://localhost : API production environment
+- http://localhost:8000 : API development environment
+- http://localhost:8080 : phpMyAdmin client (user: admin, password: gstock_api)
