@@ -1,4 +1,10 @@
 api_platform:
+    title: 'GSTOCK API'
+    description: 'This API has been developed by Héctor Medina
+    (https://github.com/hector-medina). You can create orders and orders items.
+    You can find more info at https://github.com/hector-medina/gstock-test'
+    version: '0.1.0'
+    show_webby: false
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
     patch_formats:
