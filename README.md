@@ -33,21 +33,7 @@ docker-compose up
 
 4. Install dependencies.
 
-- If you have installed [Composer](https://getcomposer.org/) installed, just run: 
-```sh
-composer install
-```
-- If you NOT have composer installed in your host machine, then you should run the 
-command inside the container. To do so, first you have to get your container ID:
-```sh
-docker ps
-```
-Then you should connect to your container :
-```sh
-docker exec -it <CONTAINER_ID> bash
-```
-
-or simply
+You should run a command inside the container. To do so, first you have connect to it:
 ```sh
 docker exec -it gstock_api bash
 ```
