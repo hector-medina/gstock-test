@@ -46,5 +46,6 @@ composer install
 ### 5. Visit your site.
 
 Now you are able to access your site by typing, but there are currently two enviroment exposed
-- http://localhost:80 or http://localhost : Production environment
-- http://localhost:8000 : Development environment
+- http://localhost:80 or http://localhost : API production environment
+- http://localhost:8000 : API development environment
+- http://localhost:8080 : phpMyAdmin client (user: admin, password: gstock_api)
