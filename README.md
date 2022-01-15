@@ -43,11 +43,19 @@ And then you can install dependencies with composer:
 composer install
 ```
 
+### 5. Synchronize API with database.
+
+To make sure everything will work, we have to update database schema in according with API entities. To do so, run the
+following commands in the container.
+```sh
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+```
+
 ### 5. Visit your site.
 
 Now you are able to access your site by typing, but there are currently two enviroment exposed
 - http://localhost:80 or http://localhost : API production environment
-- http://localhost:8000 : API development environment
 - http://localhost:8080 : phpMyAdmin client (user: admin, password: gstock_api)
 
 ## Usage
