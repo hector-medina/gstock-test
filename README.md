@@ -71,9 +71,9 @@ In order to use the API, there is available a comfortable view in http://localho
 
 ### Insert an Order.
 
-An order consist of a purchase, you can populate this order with order items once you have been created the order.
+An order is a purchase, you can populate this order with order items once you have created the order.
 
-In order to create de order, send a post request as follow:
+In order to create an order, send a post request as follow:
 ```sh
 Headers
 - Application : application/json
