@@ -56,6 +56,7 @@ php bin/console make:migration
 php bin/console doctrine:migrations:migrate
 ```
 Note that the last command could fail, I haven't had time to fix it. It happens because it tries to create the same table twice. 
+Anyway, it will work perfectly regardless this error. 
 
 ### 6. Visit your site.
 
