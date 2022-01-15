@@ -7,6 +7,8 @@ The infrastucture has been developed as follows:
 - gstock_db: MySQL database.
 - gstock_phpmyadmin: phpMyAdmin client for MySQL database.
 
+## Demo API
+
 You can find a demo APi at http://hectormedina.es/api
 
 ## Installation.
@@ -51,7 +53,9 @@ To make sure everything will work, we have to update database schema in accordin
 following commands in the container.
 ```sh
 php bin/console make:migration
+php bin/console doctrine:migrations:migrate
 ```
+Note that the last command could fail, I haven't had time to fix it. It happens because it tries to create the same table twice. 
 
 ### 6. Visit your site.
 
