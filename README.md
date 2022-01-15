@@ -7,6 +7,8 @@ The infrastucture has been developed as follows:
 - gstock_db: MySQL database.
 - gstock_phpmyadmin: phpMyAdmin client for MySQL database.
 
+You can find a demo APi at http://hectormedina.es/api
+
 ## Installation.
 
 In order to install the API, you should follow the next steps:
@@ -49,10 +51,9 @@ To make sure everything will work, we have to update database schema in accordin
 following commands in the container.
 ```sh
 php bin/console make:migration
-php bin/console doctrine:migrations:migrate
 ```
 
-### 5. Visit your site.
+### 6. Visit your site.
 
 Now you are able to access your site by typing, but there are currently two enviroment exposed
 - http://localhost:80 or http://localhost : API production environment
