@@ -32,7 +32,7 @@ cd gstock-test
 This command will create three containers: api, MySQL database and phpMyAdmin containers. 
 
 ```sh
-docker-compose up
+docker-compose up -d
 ```
 
 ### 4. Install dependencies.
